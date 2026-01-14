@@ -1,0 +1,58 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ['master']
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Get Git remote URL
+        id: repo-url
+        run: |
+          git config --get remote.origin.url > origin.txt
+          echo "url=$(cat origin.txt)" >> $GITHUB_OUTPUT
+
+      - name: Stop if repo URL is not allowed
+        if: ${{ steps.repo-url.outputs.url != 'https://github.com/rajgop1/chronicGPTFE' }}
+        run: |
+          echo "Not deploying because origin is not https://github.com/rajgop1/chronicGPTFE"
+          exit 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: 'npm'
+
+      - run: npm ci
+      - run: npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./dist
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

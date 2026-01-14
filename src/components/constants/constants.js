@@ -1,0 +1,1 @@
+const MAX_WIDTH = 1912

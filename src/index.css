@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.border-bottom-gradient {
+  border-bottom: 1px solid;
+  border-image-source: linear-gradient(90deg, rgba(227, 227, 227, 0.2) 0%, #E3E3E3 50%, rgba(227, 227, 227, 0.2) 100%);
+}
+
+.gradient-text {
+  -webkit-text-fill-color: #0000;
+  animation: flow 4s linear infinite;
+  background: linear-gradient(90deg, #a1ffce, #7e4493, #89f7fe, #66a6ff);
+  -webkit-background-clip: text;
+  background-size: 300%;
+}
+
+.nav-icon {
+  align-items: center;
+  display: inline-flex;
+  font-size: 14px;
+  justify-content: center;
+  transform: translateY(-1px);
+}
+
+.bg-safegurards {
+  background: linear-gradient(180deg, #FFE7CB 0%, #FFF5E5 100%),
+    linear-gradient(0deg, #F1F1F1, #F1F1F1);
+
+}
+
+.hr-card-container {
+  transition: -webkit-mask-image 0.3s ease, mask-image 0.3s ease;
+
+}
+
+.hr-card-container-mask {
+  -webkit-mask-image: linear-gradient(to right, rgba(18, 18, 18, 1) 90%, rgba(18, 18, 18, 0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-image: linear-gradient(to right, rgba(18, 18, 18, 1) 90%, rgba(18, 18, 18, 0) 100%);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+/* Override Chrome autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #121212 !important;
+  background-color: white !important;
+  background-clip: padding-box !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}

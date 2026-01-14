@@ -1,0 +1,31 @@
+.slide-window {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+
+  /* height of ONE item */
+  height: 1.2em;
+}
+
+.slide-inner {
+  display: block;
+  animation: slideUp var(--duration) steps(calc(var(--count) - 1)) infinite;
+}
+
+.slide-item {
+  display: flex;
+  align-items: center;
+  height: 1.2em;
+
+  white-space: normal; /* multi-line support */
+  color: #02b0ff;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(calc(-100% * (var(--count) - 1)));
+  }
+}
