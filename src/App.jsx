@@ -390,7 +390,7 @@ const Home = () => {
     <div className='shrink-0 h-[59px] lg:h-[99px] w-full'>
     </div>
     <Separator className={"shrink-0"} />
-    <div className='flex-1 flex flex-col justify-center [@media(min-width:1441px)]:scale-[1] [@media(min-width:1920px)]:scale-[1.2] '>
+    <div className='flex-1 flex flex-col justify-center [@media(min-width:1441px)]:scale-[1] [@media(min-width:1920px)]:scale-[1.2] [@media(min-width:2560px)]:scale-[1.6]'>
       <div className='flex flex-col lg:flex-row items-center lg:px-[40px] gap-[60px] md:gap-[40px] lg:gap-[100px] lg:gap-[0px] [@media(min-width:1440px)]:mt-[40px]'>
         <div className='flex-1'>
           <div className="flex-1 text-right md:ml-[20px]">
@@ -512,6 +512,7 @@ const Second = () => {
       lg:max-w-[1360px]
       mx-auto
       [@media(max-width:360px)]:text-[13px]
+      [@media(min-width:1920px)]:scale-[1.2]
     ">
         If you are living with diabetes, hypertension, or weight struggles, you know how unpredictable the numbers can feel — progress one week, setbacks the next, and no clear sense of what actually helps. ChronicGPT changes that. Your human doctor sets your goals, and your personal AI Doctor learns your body in real time — watching your sleep, meals, glucose, activity, and medications to guide you with simple, clinical-grade decisions every day. It turns confusion into clarity, patterns into progress, and setbacks into signals you can finally understand.
       </p>
@@ -748,7 +749,7 @@ const Fourth = ({ hrCardContainer }) => {
       </p>
     </div>
     <div className='flex flex-col-reverse lg:flex-col justify-between gap-[24px] [@media(max-width:391px)]:gap-[10px] [@media(min-width:1440px)]:gap-[65px] [@media(min-width:1440px)]:gap-[120px]'  >
-      <div className={cn('flex gap-[24px] hr-card-container pb-[8px] overflow-auto hide-scrollbar', canNext)} ref={hrCardContainer}>
+      <div className={cn('flex gap-[24px] hr-card-container pb-[8px] overflow-auto hide-scrollbar [@media(min-width:1920px)]:gap-[50px]', canNext)} ref={hrCardContainer}>
         <HorizontalCard
           title="Mornings stop feeling unpredictable"
           img={"/assets/images/hr-card-1.jpg"}
@@ -905,6 +906,7 @@ const Card = ({
   [@media(max-width:361px)]:h-[400px]
   [@media(max-width:391px)]:h-[490px]
   [@media(min-width:1920px)]:h-[700px]
+  [@media(min-width:1920px)]:h-[900px]
 
   max-h-[calc(80lvh-20px)]
   md:max-h-[calc(80lvh-40px)]
@@ -935,7 +937,7 @@ const Card = ({
             {title}
           </div>
 
-          <div className="text-[16px] text-[#121212] [@media(max-width:361px)]:text-[12px]">
+          <div className="text-[16px] text-[#121212] [@media(max-width:361px)]:text-[12px] [@media(min-width:1920px)]:text-[20px] [@media(min-width:1920px)]:leading-[2.5]">
             {children}
           </div>
         </div>
@@ -946,15 +948,15 @@ const Card = ({
 
 
 const HorizontalCard = ({ img, title, className, children }) => (
-  <div className={cn('hr-card min-w-[320px] max-w-[320px] [@media(max-width:391px)]:h-[365px] c2xl:min-w-auto 2xl:h-[450px] bg-white flex flex-col gap-[20px] p-[20px] rounded-[40px] [@media(min-width:1440px)]:h-[440px] [@media(min-width:1440px)]:gap-[20px] [@media(min-width:1920px)]:h-[490px] [@media(min-width:1440px)]:gap-[35px]', className)}>
-    <div className='img-container w-[280px] h-[152px] rounded-[20px] overflow-hidden'>
+  <div className={cn('hr-card min-w-[320px] max-w-[320px] [@media(max-width:391px)]:h-[365px] c2xl:min-w-auto 2xl:h-[450px] bg-white flex flex-col gap-[20px] p-[20px] rounded-[40px] [@media(min-width:1440px)]:h-[440px] [@media(min-width:1440px)]:gap-[20px] [@media(min-width:1920px)]:h-[490px] [@media(min-width:1440px)]:gap-[35px] [@media(min-width:2560px)]:h-[600px] [@media(min-width:2560px)]:gap-[60px]', className)}>
+    <div className='img-container w-[280px] h-[152px] rounded-[20px] overflow-hidden [@media(min-width:2560px)]:h-[250px]'>
       <img src={img} alt="" className='w-full h-full object-cover' />
     </div>
     <div className='flex flex-col gap-[4px]'>
       <h3 className='font-bold text-[22px] leading-[28px]'>
         {title}
       </h3>
-      <p className='text-[16px] [@media(min-width:1440px)]:leading-7'>
+      <p className='text-[16px] [@media(min-width:1440px)]:leading-7 [@media(min-width:2560px)]:mt-[20px]'>
         {children}
       </p>
     </div>
