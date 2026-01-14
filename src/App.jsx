@@ -385,7 +385,7 @@ function App() {
 //   </div>
 // }
 const Home = () => {
-  return <div className='home-section h-lvh pb-[30px] xl:pb-[0px] px-[42px] flex flex-col bg-[#1]'  >
+  return <div className='home-section h-lvh pb-[30px] xl:pb-[0px] px-[42px] flex flex-col bg-[#1] bg-[black]'  >
     {/* Home */}
     <div className='shrink-0 h-[59px] lg:h-[99px] w-full'>
     </div>
