@@ -390,7 +390,7 @@ const Home = () => {
     <div className='shrink-0 h-[59px] lg:h-[99px] w-full'>
     </div>
     <Separator className={"shrink-0"} />
-    <div className='flex-1 flex flex-col justify-center [@media(min-width:1441px)]:scale-[1] '>
+    <div className='flex-1 flex flex-col justify-center [@media(min-width:1441px)]:scale-[1] [@media(min-width:1920px)]:scale-[1.2] '>
       <div className='flex flex-col lg:flex-row items-center lg:px-[40px] gap-[60px] md:gap-[40px] lg:gap-[100px] lg:gap-[0px] [@media(min-width:1440px)]:mt-[40px]'>
         <div className='flex-1'>
           <div className="flex-1 text-right md:ml-[20px]">
@@ -739,7 +739,7 @@ const Fourth = ({ hrCardContainer }) => {
 
 
   return <ResponsiveSection className='h-dvh relative z-[4] text-[#121212] bg-[#F1F1F1] section-four flex flex-col gap-[10px] md:gap-[16px] lg:gap-[28px] 3xl:gap-[36px] bg-[#F1F1F1] mx-[10px] overflow-hidden'>
-    <div className='flex flex-col lg:flex-row gap-2 sm:mt-3 [@media(min-width:1440px)]:mt-[20px] [@media(min-width:1440px)]:mb-[35px]'>
+    <div className='flex flex-col lg:flex-row gap-2 sm:mt-3 [@media(min-width:1440px)]:mt-[20px] [@media(min-width:1920px)]:mt-[30px] [@media(min-width:1440px)]:mb-[35px]  [@media(min-width:1920px)]:mb-[60px]'>
       <h2 className='flex-1 text-[40px] leading-[52px]  font-medium max-[380px]:text-[24px] max-[380px]:leading-[28px]'>
         Real clinical outcomes, felt in your everyday life
       </h2>
@@ -747,7 +747,7 @@ const Fourth = ({ hrCardContainer }) => {
         You choose one or more improvement programs. Your AI Doctor works in the background every day — helping you feel the changes in ways that matter: steadier energy, calmer mornings, smoother rhythms, and more restorative nights.
       </p>
     </div>
-    <div className='flex flex-col-reverse lg:flex-col justify-between gap-[24px] [@media(max-width:391px)]:gap-[10px] [@media(min-width:1440px)]:gap-[65px]'  >
+    <div className='flex flex-col-reverse lg:flex-col justify-between gap-[24px] [@media(max-width:391px)]:gap-[10px] [@media(min-width:1440px)]:gap-[65px] [@media(min-width:1440px)]:gap-[120px]'  >
       <div className={cn('flex gap-[24px] hr-card-container pb-[8px] overflow-auto hide-scrollbar', canNext)} ref={hrCardContainer}>
         <HorizontalCard
           title="Mornings stop feeling unpredictable"
@@ -904,6 +904,7 @@ const Card = ({
   h-[550px]
   [@media(max-width:361px)]:h-[400px]
   [@media(max-width:391px)]:h-[490px]
+  [@media(min-width:1920px)]:h-[700px]
 
   max-h-[calc(80lvh-20px)]
   md:max-h-[calc(80lvh-40px)]
@@ -915,7 +916,7 @@ const Card = ({
       `}
     >
       {/* Image */}
-      <div className="img-container rounded-[20px] h-[212px] [@media(max-width:361px)]:h-[152px] overflow-hidden">
+      <div className="img-container rounded-[20px] h-[212px] [@media(max-width:361px)]:h-[152px] [@media(min-width:1920px)]:h-[400px] overflow-hidden">
         <img
           src={image}
           alt=""
@@ -945,7 +946,7 @@ const Card = ({
 
 
 const HorizontalCard = ({ img, title, className, children }) => (
-  <div className={cn('hr-card min-w-[320px] max-w-[320px] [@media(max-width:391px)]:h-[365px] c2xl:min-w-auto 2xl:h-[450px] bg-white flex flex-col gap-[20px] p-[20px] rounded-[40px] [@media(min-width:1440px)]:h-[440px] [@media(min-width:1440px)]:gap-[20px]', className)}>
+  <div className={cn('hr-card min-w-[320px] max-w-[320px] [@media(max-width:391px)]:h-[365px] c2xl:min-w-auto 2xl:h-[450px] bg-white flex flex-col gap-[20px] p-[20px] rounded-[40px] [@media(min-width:1440px)]:h-[440px] [@media(min-width:1440px)]:gap-[20px] [@media(min-width:1920px)]:h-[490px] [@media(min-width:1440px)]:gap-[35px]', className)}>
     <div className='img-container w-[280px] h-[152px] rounded-[20px] overflow-hidden'>
       <img src={img} alt="" className='w-full h-full object-cover' />
     </div>

@@ -389,7 +389,7 @@ const Second = () => {
           <div className='flex-1 text-[32px] lg:text-[40px] leading-[36px] md:leading-normal font-semibold '>
             Your Journey With Qronic AI
           </div>
-          <div className='text-[16px] leading-[22px] text-[#4A4A4A] flex-1 font-medium'>
+          <div className='text-[16px] leading-[22px] text-[#4A4A4A] flex-1 font-medium [@media(min-width:1920px)]: text-[18px]'>
             Your AI Doctor combines three essential functions to provide continuous, intelligent care.
           </div>
         </div>
@@ -426,7 +426,7 @@ const Card = ({ title, logo, img, children, position = "01", className }) => (
         <img src={img} className='w-full h-full object-cover rounded-[30px] lg:rounded-[24px]' />
       </div>
       <div className='flex flex-col gap-[8px]'>
-        <div className='font-bold text-[24px] lg:text-[20px] flex flex-col gap-[8px]'>
+        <div className='font-bold  text-[24px] lg:text-[20px] flex flex-col gap-[8px] '>
           <div>{title}</div>
         </div>
         <div className='card-children text-[16px] leading-[24px] '>

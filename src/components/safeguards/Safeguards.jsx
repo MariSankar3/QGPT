@@ -219,7 +219,7 @@ const Third = () => {
           <div className='flex-1 text-[32px] lg:text-[40px] font-semibold  [@media(max-width:391px)]:leading-[40px]'>
             Safeguards you deserve
           </div>
-          <div className='flex-1 font-medium text-[16px]'>
+          <div className='flex-1 font-medium text-[16px] [@media(min-width:1920px)]: text-[18px]'>
             Your AI Doctor is designed with multiple layers of protection to ensure your safety, privacy, and the highest standard of care.
           </div>
         </div>
@@ -271,7 +271,7 @@ const Card = ({ title, logo, img, children }) => (
 
 const BuildForTrust = () => (
   <div className='build-for-trust bg-transparent rounded-[52px]  overflow-hidden flex flex-col border border-[5px] border-white '>
-   <div className="relative h-[310px] sm:h-[260px] lg:h-[420px] rounded-[24px] lg:rounded-[52px] overflow-hidden  ">
+   <div className="relative h-[310px] sm:h-[260px] lg:h-[420px] rounded-[24px] lg:rounded-[52px] overflow-hidden">
 
   {/* Mobile image */}
   <img
@@ -289,16 +289,16 @@ const BuildForTrust = () => (
 
 </div>
 
-    <div className='flex-1 flex flex-col  lg:justify-center [@media(max-width:391px)]:gap-[0px] sm:gap-[24px] text-center px-[10px] py-[18px] sm:py-[24px] lg:p-[24px] sm:pb-[32px] '>
-      <div className='text-[34px] lg:text-[36px] font-semibold max-[380px]:text-[24px] [@media(min-width:1440px)]:-mt-[60px]'>Built for Trust</div>
+    <div className='flex-1 flex flex-col  lg:justify-center [@media(max-width:391px)]:gap-[0px] sm:gap-[24px] text-center px-[10px] py-[18px] sm:py-[24px] lg:p-[24px] sm:pb-[32px] [@media(min-width:1920px)]:gap-[20px]'>
+      <div className='text-[34px] lg:text-[36px] font-semibold max-[380px]:text-[24px] [@media(min-width:1440px)]:-mt-[60px] [@media(min-width:1920px)]: text-[40px]'>Built for Trust</div>
       <div className='text-[16px] flex flex-col gap-[8px] w-[92%] mx-auto sm:w-[100%]'>
-        <div className='font-medium max-[380px]:text-[13px]'>
+        <div className='font-medium max-[380px]:text-[13px] [@media(min-width:1920px)]: text-[20px]'>
           We know you can only trust a system that is medically sound, transparent, and accountable. ChronicGPT is built so that your AI Doctor never acts alone. Your human doctor sets your health goals, licensed physicians oversee your progress, and every recommendation your AI Doctor makes is traceable, explainable, and grounded in real clinical reasoning. You are always informed, always in control, and never navigating your health alone.
         </div>
-        <div className='font-bold pt-[16px] lg:pt-0 max-[380px]:text-[14px]'>
+        <div className='font-bold pt-[16px] lg:pt-0 max-[380px]:text-[14px] [@media(min-width:1920px)]: text-[22px] [@media(min-width:1920px)]: p-6'>
           How we keep you safe:
         </div>
-        <div className='font-medium max-[380px]:text-[13px]'>
+        <div className='font-medium max-[380px]:text-[13px] [@media(min-width:1920px)]: text-[20px]'>
           <div><span className='font-semibold'> Clinical Oversight: </span> Physicians review your clinical trace and intervene whenever needed.</div>
           <div><span className='font-semibold'> Transparent Decisions: </span> You always see why your AI Doctor recommended something — no black boxes.</div>
           <div><span className='font-semibold'> Your Data Stays Yours: </span> Fully encrypted, never sold, never shared for ads, and always under your control.</div>

@@ -43,8 +43,8 @@ const HorizontalScroll = ({ children, gap = 24, speed = 1 }) => {
   return (
     <div ref={containerRef} className="overflow-hidden">
       <motion.div
-        className="flex"
-        style={{ x, gap }}
+      style={{ x, gap }}
+        className="flex" 
       >
         {children}
       </motion.div>

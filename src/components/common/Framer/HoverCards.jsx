@@ -61,7 +61,7 @@ export default function HoverCards({ cards }) {
             </motion.div>
 
             <motion.div
-              className="text-[15px] font-bold py-2"
+              className="text-[15px] font-bold py-2 [@media(min-width:1920px)]:text-[20px]"
               animate={{
                 fontSize: isActive ? EXPANDED_TITLE_SIZE : BASE_TITLE_SIZE,
                 opacity: isActive ? 1 : 0.6,
@@ -72,7 +72,7 @@ export default function HoverCards({ cards }) {
             </motion.div>
             <div className="flex flex-1">
               <motion.div
-                className="text-[13px] leading-[1.25] pr-1 [@media(min-width:1440px)]: leading-[25px]"
+                className="text-[13px] leading-[1.25] pr-1 [@media(min-width:1440px)]: leading-[25px] [@media(min-width:1920px)]:text-[18px] [@media(min-width:1440px)]: leading-[32px]"
                 style={{ maskImage: isActive ? 'none' : 'linear-gradient(to bottom, black 70%, transparent)' }}
                 initial={false}
                 animate={{
